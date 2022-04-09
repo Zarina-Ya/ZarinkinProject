@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &611823196649132483
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 18540446251430413, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 18540446251430413, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.0668339
+      objectReference: {fileID: 0}
+    - target: {fileID: 18540446251430413, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.86769474
+      objectReference: {fileID: 0}
+    - target: {fileID: 18540446251430413, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.912215
+      objectReference: {fileID: 0}
+    - target: {fileID: 18540446251430413, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 18540446251430413, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 18540446251430413, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 18540446251430413, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 18540446251430413, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 18540446251430413, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 18540446251430413, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 388499654140604574, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: m_Size.x
+      value: 5.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 388499654140604574, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: m_Size.y
+      value: 4.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 388499654140604574, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ed45123a96919d84bbce0a2a306eaf6a, type: 3}
+    - target: {fileID: 388499654140604574, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194066969173869711, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: m_Name
+      value: Vadimka
+      objectReference: {fileID: 0}
+    - target: {fileID: 2459650966120475334, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: _countItem
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2608621335767932099, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: m_Radius
+      value: 0.22290066
+      objectReference: {fileID: 0}
+    - target: {fileID: 2608621335767932099, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: m_Center.y
+      value: -0.037926942
+      objectReference: {fileID: 0}
+    - target: {fileID: 9054203877974673105, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9054203877974673105, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9054203877974673105, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b15686ec278659948a7e59e8b0823b6d, type: 3}
