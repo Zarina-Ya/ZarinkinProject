@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
    
     [SerializeField] private HeathBar _bar;
 
-    void Awake()
+    void Start()
     {
         _bar.SetMaxHealth(_maxHealth);
     }
