@@ -65,11 +65,11 @@ public class PlayerController : MonoBehaviour
             //}
             //else _animator.SetBool("isGrounded", !_isGrounded);
 
-            if(Input.GetMouseButtonDown(0))
-            {
-                var player = GetComponent<Player>();
-                player.Fire(_spawnTransform);
-            }
+            //if(Input.GetMouseButtonDown(1))
+            //{
+            //    var player = GetComponent<Player>();
+            //    player.Fire(_spawnTransform);
+            //}
         }
        
     
