@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     private Animator _animator;
 
-    [SerializeField] private float _speed;
+    [SerializeField] private float _turnspeed;
     [SerializeField] private float _moveSpeed = 6f;
 
     [SerializeField] private Vector3 _moveDirection;
@@ -39,8 +39,7 @@ public class PlayerController : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody>();    
         _rb.freezeRotation = true;// запрещает любое вращение 
-
-       // _animator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
     }
 
  
@@ -50,8 +49,9 @@ public class PlayerController : MonoBehaviour
         _isGrounded = Physics.Raycast(transform.position, Vector3.down, _playerHeight/2 + 0.5f ); 
         
         Debug.DrawRay(transform.position, Vector3.down *(_playerHeight / 2 + 0.5f), Color.red);
-        //print(_playerHeight / 2 + 0.2f);
-        //print(_isGrounded);
+
+
+   
         MyInput();
         ControlDrag();
 
@@ -60,6 +60,8 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
+
+       
     }
 
     private void FixedUpdate()
@@ -87,7 +89,10 @@ public class PlayerController : MonoBehaviour
         _horizontalMovement = Input.GetAxis("Horizontal");//  Input.GetAxisRaw("Horizontal") - в таком случае зачение : либо 0 , либо 1 , без сглаживания
         _verticalMovement = Input.GetAxis("Vertical");
 
-        _moveDirection = transform.forward * _verticalMovement + transform.right * _horizontalMovement; 
+        transform.Rotate(/*Vector3.up * _horizontalMovement * (100f * Time.deltaTime)*/transform.up * _horizontalMovement * _turnspeed);
+        _moveDirection = transform.forward * _verticalMovement /*+ transform.right * _horizontalMovement*/;
+
+        _animator.SetBool("isWalking", _moveDirection != Vector3.zero) ;
     }
 
     void MovePlayer()
