@@ -55,13 +55,21 @@ public class PlayerController : MonoBehaviour
         MyInput();
         ControlDrag();
 
-
-        if (Input.GetKeyDown(_jumpKey) && _isGrounded)
+        if( _isGrounded)
         {
-            Jump();
-        }
+            if (Input.GetKeyDown(_jumpKey) /*&& _isGrounded*/)
+            //{
+                Jump();
+            //    _animator.SetBool("isGrounded", _isGrounded);
 
+            //}
+            //else _animator.SetBool("isGrounded", !_isGrounded);
+        }
        
+    
+
+
+
     }
 
     private void FixedUpdate()
@@ -112,6 +120,8 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
+        
         _rb.AddForce(transform.up * _jumpForce, ForceMode.Impulse);
+        
     }
 }
