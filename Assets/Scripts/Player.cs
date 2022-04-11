@@ -6,9 +6,9 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField] private int _health;
-    [SerializeField] private GameObject _gun;
+    [SerializeField] private GameObject _bullet;
 
-    private int _maxHealth = 10, _minHealth = 0;
+    private int _maxHealth = 40, _minHealth = 0;
 
     [SerializeField] private int _countKey = 0;
 
@@ -16,8 +16,13 @@ public class Player : MonoBehaviour
    
     [SerializeField] private HeathBar _bar;
 
+    [SerializeField] private int _damage = 5;
+
+    private bool _isFire ;
     void Start()
     {
+        _isFire = true;
+        _maxHealth = _health;
         _bar.SetMaxHealth(_maxHealth);
     }
 
@@ -47,6 +52,27 @@ public class Player : MonoBehaviour
 
     }
 
+    public void Fire(Transform pose)
+    {
+        _isFire = false;
+        //var spawner = Instantiate(_gun, pose.position, pose.rotation);
+        var bull = Instantiate(_bullet, pose.position, pose.rotation);
+        //var rbBUllet = bull.GetComponent<Rigidbody>();
+        //rbBUllet
+        //rbBUllet.AddForce(transform.forward * 200f);
+        print("Fire");
+        var bullet = bull.GetComponent<BulletForEnemy>();
+        bullet.Init(2f);
+
+        Invoke(nameof(Reloading), 2);
+    }
+    private void Reloading()
+    {
+        _isFire = true;
+    }
 
 }
+
+
+
 

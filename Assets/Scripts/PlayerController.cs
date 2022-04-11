@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private KeyCode _jumpKey = KeyCode.Space;
 
-
+    [SerializeField] private Transform _spawnTransform;
 
 
     void Awake()
@@ -64,6 +64,12 @@ public class PlayerController : MonoBehaviour
 
             //}
             //else _animator.SetBool("isGrounded", !_isGrounded);
+
+            if(Input.GetMouseButtonDown(0))
+            {
+                var player = GetComponent<Player>();
+                player.Fire(_spawnTransform);
+            }
         }
        
     
