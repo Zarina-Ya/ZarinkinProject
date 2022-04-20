@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PauseMenu : MonoBehaviour
+public class PauseMenu : MonoBehaviour, IPointerClickHandler
 {
 
     [SerializeField] private bool _isPause;
@@ -14,11 +15,11 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject _pauseGameMenu;
 
 
-    void Awake()
-    {
-        _resumeButton.onClick.AddListener(Resume);
-        _backButton.onClick.AddListener(LoadMenu);
-    }
+    //void Awake()
+    //{
+    //    _resumeButton.onClick.AddListener(Resume);
+    //    _backButton.onClick.AddListener(LoadMenu);
+    //}
 
     void Update()
     {
@@ -35,14 +36,14 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    private void Resume()
+     public void Resume()
     {
         _pauseGameMenu.SetActive(false);// меню паузы не активно 
         Time.timeScale = 1f;// время в нормальном режиме 
         _isPause = false;
     }
 
-    private void Pause()
+     void Pause()
     {
        _pauseGameMenu.SetActive(true);
         Time.timeScale = 0f;
@@ -55,4 +56,8 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        
+    }
 }
