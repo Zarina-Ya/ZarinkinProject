@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PauseMenu : MonoBehaviour, IPointerClickHandler
+public class PauseMenu : MonoBehaviour
 {
 
     [SerializeField] private bool _isPause;
@@ -13,6 +13,7 @@ public class PauseMenu : MonoBehaviour, IPointerClickHandler
     [SerializeField] private Button _backButton;
 
     [SerializeField] private GameObject _pauseGameMenu;
+    [SerializeField] private GameObject _audioSettings;
 
 
     //void Awake()
@@ -56,8 +57,14 @@ public class PauseMenu : MonoBehaviour, IPointerClickHandler
         SceneManager.LoadScene(1);
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void Settings()
     {
-        
+        _audioSettings.SetActive(true);
+    }
+
+    public void Close()
+    {
+        _audioSettings.SetActive(false);
+
     }
 }
